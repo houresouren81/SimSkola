@@ -1,17 +1,10 @@
-// Get the modal
 var modal = document.getElementById('id01');
 
 localStorage.setItem("username", "Sara");
-// Retrieve
 document.getElementById("save").innerHTML = localStorage.getItem("username");
 
 localStorage.setItem("password", "qwe123");
-// Retrieve
-document.getElementById("save").innerHTML = localStorage.getItem("passwword");
-
-
-
-// When the user clicks anywhere outside of the modal, close it
+document.getElementById("save").innerHTML = localStorage.getItem("passwword")
 
 
 window.onclick = function(event) {
