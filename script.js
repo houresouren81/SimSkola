@@ -1,10 +1,6 @@
 var modal = document.getElementById('id01');
 
-localStorage.setItem("username", "Sara");
-document.getElementById("save").innerHTML = localStorage.getItem("username");
 
-localStorage.setItem("password", "qwe123");
-document.getElementById("save").innerHTML = localStorage.getItem("passwword")
 
 
 window.onclick = function(event) {
@@ -19,7 +15,13 @@ function myFunction() {
     let psw = document.getElementsByName("psw")[0].value;
     try { 
       if(uname == "Sara" && psw =="qwe123")
-      {  alert( "välkommen, du är nu inloggad");}
+      {  alert( "välkommen, du är nu inloggad");
+      localStorage.setItem("username", "Sara");
+      document.getElementById("save").innerHTML = localStorage.getItem("username");
+      
+      localStorage.setItem("password", "qwe123");
+      document.getElementById("save").innerHTML = localStorage.getItem("passwword");
+    }
       
       else{
         alert("försök igen");
