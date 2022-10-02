@@ -17,10 +17,14 @@ function myFunction() {
       if(uname == "Sara" && psw =="qwe123")
       {  alert( "välkommen, du är nu inloggad");
       localStorage.setItem("username", "Sara");
-      document.getElementById("save").innerHTML = localStorage.getItem("username");
+      let username=localStorage.getItem("username");
+      
+      console.log(username);
       
       localStorage.setItem("password", "qwe123");
-      document.getElementById("save").innerHTML = localStorage.getItem("passwword");
+      let password=localStorage.getItem("password");
+      console.log(password);
+
     }
       
       else{
