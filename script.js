@@ -1,39 +1,43 @@
-var modal = document.getElementById('id01');
+const username = document.getElementById("username");
+const password = document.getElementById("password");
+const loggain = document.getElementById("loggain");
+const loggaut = document.getElementById("loggaut");
 
 
+loggain.addEventListener("click", function () {
 
+    if (username.value == "Sara" && password.value == "qwe123") {
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+        localStorage.setItem("usernamn", "Sara");
+        localStorage.setItem("password", "qwe123");
+        document.getElementById("sida1").style.display = "none";
+        
+    
+        document.getElementById("loggaut").style.display = "block";
     }
-}
-function myFunction() {
+    else {
+
+        alert("Fel password försök igen.");
+    }});
+
+
+
+
+    loggaut.addEventListener("click", function () {
+
+
+
+        localStorage.removeItem("usernamn", "Sara");
+        localStorage.removeItem("password", "qwe123");
+        document.getElementById("sida1").style.display = "block";
+
+        document.getElementById("loggaut").style.display = "none";
+    } 
   
-   
-    let uname = document.getElementsByName("uname")[0].value;
-    let psw = document.getElementsByName("psw")[0].value;
-    try { 
-      if(uname == "Sara" && psw =="qwe123")
-      {  alert( "välkommen, du är nu inloggad");
-      localStorage.setItem("username", "Sara");
-      let username=localStorage.getItem("username");
-      
-      console.log(username);
-      
-      localStorage.setItem("password", "qwe123");
-      let password=localStorage.getItem("password");
-      console.log(password);
+    
+);
 
-    }
-      
-      else{
-        alert("försök igen");
-      }
-      
-      
-    }
-    catch(err) {
-      message.innerHTML = "Input is " + err;
-    }
-  }
+
+
+
+
