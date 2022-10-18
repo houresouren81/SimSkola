@@ -6,19 +6,13 @@ const loggaut = document.getElementById("loggaut");
 
 
 
+let userChecker = localStorage.getItem("username");
 
 
-
-
-if (localStorage.getItem("username") == "Sara" && localStorage.getItem("password")=="qwe123") { 
+if (userChecker == 'Sara'  );  { 
 
     document.getElementById("sida1").style.display= "none";
     document.getElementById("loggaut").style.display="block";
-
-    
-   
-   
-    
     }
 
 
@@ -47,9 +41,8 @@ loggain.addEventListener("click", function () {
 loggaut.addEventListener("click", function () {
 
 
-
-    localStorage.removeItem("usernamn", "Sara");
-    localStorage.removeItem("password", "qwe123");
+// Här nere rensar du localStorage med en rad.
+    localStorage.clear();
     document.getElementById("sida1").style.display = "block";
 
     document.getElementById("loggaut").style.display = "none";
@@ -57,8 +50,3 @@ loggaut.addEventListener("click", function () {
 
 
 );
-
-
-
-
-
