@@ -7,9 +7,10 @@ const loggaut = document.getElementById("loggaut");
 
 
 let userChecker = localStorage.getItem("username");
+let passChecker = localStorage.getItem("password");
 
 
-if (userChecker == 'Sara'  );  { 
+if (userChecker == 'Sara' && passChecker == 'qwe123' );  { 
 
     document.getElementById("sida1").style.display= "none";
     document.getElementById("loggaut").style.display="block";
@@ -41,7 +42,7 @@ loggain.addEventListener("click", function () {
 loggaut.addEventListener("click", function () {
 
 
-// Här nere rensar du localStorage med en rad.
+
     localStorage.clear();
     document.getElementById("sida1").style.display = "block";
 
