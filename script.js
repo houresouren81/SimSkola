@@ -10,20 +10,19 @@ let userChecker = localStorage.getItem("username");
 let passChecker = localStorage.getItem("password");
 
 
-if (userChecker == 'Sara' && passChecker == 'qwe123' );  { 
+if (userChecker == 'Sara' && passChecker == 'qwe123' )  { 
 
     document.getElementById("sida1").style.display= "none";
     document.getElementById("loggaut").style.display="block";
-    }
 
 
-
+}
 
 loggain.addEventListener("click", function () {
 
     if (username.value == "Sara" && password.value == "qwe123") {
 
-        localStorage.setItem("usernamn", "Sara");
+        localStorage.setItem("username", "Sara");
         localStorage.setItem("password", "qwe123");
         document.getElementById("sida1").style.display = "none";
 
@@ -47,7 +46,4 @@ loggaut.addEventListener("click", function () {
     document.getElementById("sida1").style.display = "block";
 
     document.getElementById("loggaut").style.display = "none";
-}
-
-
-);
+});
